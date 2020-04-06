@@ -11,7 +11,19 @@ class GameOverActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_over)
-        btnMainMenu.setOnClickListener {
+
+        var wrongAnswers = intent.getIntExtra(GameActivity.ANSWERS_COUNT, 0)
+        tvTextGameOver.text = "$wrongAnswers / ${GameActivity.SCORE_COUNT}"
+
+        btnRestartOver.setOnClickListener{
+            val newGame = Intent(this, GameActivity::class.java)
+            Toast.makeText(this,"New Game", Toast.LENGTH_SHORT).show()
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(newGame)
+            finish()
+        }
+
+        btnMainMOver.setOnClickListener {
             val mainMenu = Intent(this, MainActivity::class.java)
             Toast.makeText(this, "Main Menu", Toast.LENGTH_SHORT).show()
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)

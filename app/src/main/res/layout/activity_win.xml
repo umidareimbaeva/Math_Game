@@ -16,10 +16,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2"
-        android:src="@drawable/smile" />
+        android:src="@drawable/smile"
+        android:contentDescription="@string/app_name"/>
 
     <TextView
-        android:id="@+id/ivYouWin"
+        android:id="@+id/tvYouWin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,22 +29,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.6"
         android:text="You Win"
-        android:textSize="48dp"
+        android:textSize="48sp"
         android:gravity="center" />
-
-    <Button
-        android:id="@+id/btnMainM"
+    <TextView
+        android:id="@+id/tvYourScore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:textSize="36sp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnRestart"
+        style="@style/ActionButton"
+        app:layout_constraintVertical_bias="0.8"
+        android:text="Restart"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnMainM"
+        style="@style/ActionButton"
         app:layout_constraintVertical_bias="0.9"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
         android:text="Main Menu"
-        android:textSize="28sp"
-        android:background="#c0c0c0" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
