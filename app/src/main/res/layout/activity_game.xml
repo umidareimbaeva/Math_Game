@@ -30,10 +30,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
+
     <ImageView
         android:id="@+id/ivSchool"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/school"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,4 +119,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnC" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
