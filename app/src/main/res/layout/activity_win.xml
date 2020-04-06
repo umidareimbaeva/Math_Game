@@ -4,57 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WinActivity"
-    android:background="#77979C">
+    android:background="#77979C"
+    tools:context=".WinActivity">
 
     <ImageView
         android:id="@+id/ivSmile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/smile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        android:src="@drawable/smile"
-        android:contentDescription="@string/app_name"/>
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:id="@+id/tvYouWin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="You Win"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
-        android:text="You Win"
-        android:textSize="48sp"
-        android:gravity="center" />
+        app:layout_constraintVertical_bias="0.6" />
+
     <TextView
         android:id="@+id/tvYourScore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7"
-        android:textSize="36sp"
-        android:gravity="center" />
+        app:layout_constraintVertical_bias="0.7" />
 
     <Button
         android:id="@+id/btnRestart"
         style="@style/ActionButton"
-        app:layout_constraintVertical_bias="0.8"
         android:text="Restart"
+        app:layout_constraintVertical_bias="0.8"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btnMainM"
         style="@style/ActionButton"
-        app:layout_constraintVertical_bias="0.9"
         android:text="Main Menu"
+        app:layout_constraintVertical_bias="0.9"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -98,27 +98,23 @@ class GameActivity : AppCompatActivity() {
         if (selectedVariant == resultT) {
             Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
             rightAnswer++
-        }
-        else {
+        } else {
             Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show()
         }
 
-        if(levelCount == SCORE_COUNT && rightAnswer == SCORE_COUNT){
+        if (levelCount == SCORE_COUNT && rightAnswer == SCORE_COUNT) {
             val win = Intent(this, WinActivity::class.java)
             win.putExtra(ANSWERS_COUNT, rightAnswer)
             Toast.makeText(this, "You Win!", Toast.LENGTH_LONG).show()
             startActivity(win)
             finish()
-        }
-        else if(levelCount == SCORE_COUNT && rightAnswer != SCORE_COUNT){
+        } else if (levelCount == SCORE_COUNT && rightAnswer != SCORE_COUNT) {
             val lose = Intent(this, GameOverActivity::class.java)
             lose.putExtra(ANSWERS_COUNT, rightAnswer)
             Toast.makeText(this, "You Lose!", Toast.LENGTH_LONG).show()
             startActivity(lose)
             finish()
-        }
-        else
-        {
+        } else {
             generateNumbers()
         }
     }
